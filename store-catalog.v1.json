@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "store-catalog.v1",
+  "entries": [
+    {
+      "id": "pack.core.carapace-default",
+      "kind": "pack",
+      "category": "core",
+      "title": "Core Carapace Pack",
+      "description": "Baseline Carapace runtime defaults for memory, orchestration, integrations, and operator guidance.",
+      "tags": ["core", "recommended", "onboarding"],
+      "version": 1,
+      "featured": true,
+      "recommended": true,
+      "onboardingDefault": true,
+      "basePack": true,
+      "includes": ["integration.youtube-studio", "guides.operator-playbook", "skill.github-issues-automation"]
+    },
+    {
+      "id": "pack.vocation.creator-starter",
+      "kind": "pack",
+      "category": "pack",
+      "title": "Creator Starter Pack",
+      "description": "Starter bundle for creator operations with publish integration plus guidance docs.",
+      "tags": ["pack", "vocation", "creator"],
+      "version": 1,
+      "includes": ["integration.youtube-studio", "guides.operator-playbook"]
+    },
+    {
+      "id": "skill.github-issues-automation",
+      "kind": "item",
+      "category": "skill",
+      "installMode": "patch",
+      "operations": {
+        "installMode": "patch",
+        "fileOps": [{ "action": "overlay" }],
+        "configOps": [{ "action": "merge" }],
+        "postInstallOps": [{ "action": "index-skill" }],
+        "uninstallOps": [{ "action": "revert-overlay" }]
+      },
+      "title": "GitHub Issues Automation Skill",
+      "description": "Install/update a multi-file skill package for issue triage, fix loops, and PR follow-up workflows.",
+      "tags": ["skill", "clawhub", "automation"],
+      "version": 1
+    },
+    {
+      "id": "integration.youtube-studio",
+      "kind": "item",
+      "category": "integration",
+      "title": "YouTube Studio Integration",
+      "description": "Connect basic channel publishing and analytics flows.",
+      "tags": ["integration", "youtube"],
+      "version": 1
+    },
+    {
+      "id": "guides.operator-playbook",
+      "kind": "item",
+      "category": "guides",
+      "title": "Operator Playbook",
+      "description": "Guidance markdown bundle for operating Carapace day to day.",
+      "tags": ["guides", "operations", "markdown"],
+      "version": 1
+    }
+  ]
+}
