@@ -59,6 +59,23 @@
       "description": "Guidance markdown bundle for operating Carapace day to day.",
       "tags": ["guides", "operations", "markdown"],
       "version": 1
+    },
+    {
+      "id": "tool.camoufox-web-automation",
+      "kind": "item",
+      "category": "tool",
+      "title": "Camoufox Web Automation Tool",
+      "description": "Rendered-page scraping and page comparison tool package with explicit MCP, harness, and window contracts.",
+      "tags": ["tool", "browser", "scraping", "camoufox"],
+      "version": 1,
+      "repository": "https://github.com/CarapaceUDE/carapace-tool-camoufox",
+      "release": "v0.1.0",
+      "runtimeMetadata": {
+        "contracts": ["mcp", "harness", "window"],
+        "maxRiskLevel": "guarded",
+        "harness": { "bindScope": "loopback", "authMode": "token" },
+        "verification": { "checksum": "published" }
+      }
     }
   ]
 }
